@@ -390,8 +390,30 @@
 
 .trends-card {
     position: relative;
+    display: flex;
+    height: 231px;
     margin-bottom: 2px;
     font-size: 16px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card-1 {
+    background-image: url(../images/trend1.jpg);
+}
+
+.card-2 {
+    background-image: url(../images/trend2.jpg);
+}
+
+.card-3 {
+    background-image: url(../images/trend3.jpg);
+}
+
+.card-4 {
+    background-image: url(../images/trend4.jpg);
 }
 
 .trends-card::after {
@@ -404,11 +426,6 @@
     height: 100%;
     background-color: #000000;
     opacity: 0.6;
-}
-
-.trends-card-img {
-    display: block;
-    width: 100%;
 }
 
 .trends-card-body {
@@ -857,6 +874,9 @@ p:last-child {
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 25px;
+    padding-right: 21px;
+    padding-left: 21px;
+    box-sizing: border-box;
 }
 
 .product:last-child {
@@ -864,7 +884,6 @@ p:last-child {
 }
 
 .product-imgbox {
-    display: block;
     max-width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -872,11 +891,15 @@ p:last-child {
 
 .product-preview {
     max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .product-info {
     position: relative;
     margin-top: -31px;
+    margin-right: -21px;
+    margin-left: -21px;
     padding-left: 18px;
     padding-right: 21px;
     padding-bottom: 26px;
@@ -1196,17 +1219,23 @@ p:last-child {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        width: 100%;
     }
     .product {
-        width: 47%;
+        width: calc(50% - 23px);
         margin-bottom: 28px;
+        margin-right: 23px;
+        padding-right: 23px;
+        padding-left: 23px;
+        box-sizing: border-box;
     }
-    .product:nth-child(2n+1) {
-        margin-right: 4px;
+    .product:nth-child(2n) {
+        margin-right: 0;
     }
     .product-info {
-        height: 264px;
+        min-height: 264px;
+        width: 100%;
+        margin-right: -23px;
+        margin-left: -23px;
     }
     .footer {
         margin-top: 50px;
@@ -1219,6 +1248,7 @@ p:last-child {
 @media (min-width: 1200px),
 (orientation: landscape) and (min-height: 641px) and (max-height: 1199px) {
     .trends-card {
+        height: 320px;
         width: calc(25% - 4px);
         margin-right: 4px;
     }
@@ -1280,6 +1310,7 @@ p:last-child {
         margin-bottom: 28px;
     }
     .trends-card {
+        height: 320px;
         width: calc(25% - 4px);
         margin-right: 4px;
     }
@@ -1371,8 +1402,6 @@ p:last-child {
     }
     .product {
         width: calc(100% - 124px);
-    }
-    .product {
         margin-right: 62px;
         margin-bottom: 0;
     }
@@ -1380,7 +1409,7 @@ p:last-child {
         margin-right: 0;
     }
     .product-info {
-        height: 267px;
+        min-height: 267px;
         padding-left: 20px;
         padding-right: 21px;
     }
